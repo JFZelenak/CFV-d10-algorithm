@@ -1,0 +1,15 @@
+start;
+output "please enter max number N";
+input N;
+choose randomNumber between 1 and N;
+output "please input your guessNumber";
+input guessNumber;
+while guessNumber != randomNumber {
+    if guessNumber > randomNumber {
+        output "wrong - guess lower";
+    } else guessNumber < randomNumber {
+        output "wrong - guess higher";
+    } 
+}
+output "correct";
+End
