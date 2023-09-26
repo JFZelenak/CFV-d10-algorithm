@@ -1,13 +1,36 @@
 const randomArray = [1, 3, 5, 4, 5, 9, 6, 1, 2, 6, 5, 4, 4, 9, 7];
-var sortedArray = [];
+let sortedArray = [];
 
-for (var highestNumber = 9; highestNumber > 0; highestNumber--) {
-    for (var counter = 0; counter < randomArray.lenght; counter++) {
-        if ( randomArray[i] = highestNumber) {
-            sortedArray.push(randomArray[i]);
+for (var lowestNumber = 1; lowestNumber < 10; lowestNumber++) {
+    for (var counter = 0; counter < randomArray.length; counter++) {
+        if (randomArray[counter] === lowestNumber) {
+            sortedArray.push(randomArray[counter]);
         }
     }
 }
 
 console.log(sortedArray);
 
+---
+
+pseudo-code:
+choose random numbers from 1 to 9 for the array randomArray;
+
+check how many numbers are in array randomArray and save as randomArray.length;
+
+lowest-number-loop start:
+
+    array-value-check-loop start:
+        check if randomArray[counter] has lowestNumber as value;
+        if it has then push that number in the new array sortedArray;
+        if not just continue;
+        add 1 to counter;
+        repeat array-value-check-loop until counter = (randomArray.length - 1);
+    array-value-check-loop end;
+
+    add 1 to lowestNumber and repeat lowest-number-loop until lowestNumber = 10;
+
+lowest-number-loop end;
+
+output randomArray;
+output sortedArray;
